@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5AAB421F-2477-42B6-A981-EA97B542358B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SQLMonitor</RootNamespace>
+    <AssemblyName>SQLMonitor</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>SQLMonitor.Program</StartupObject>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <ManifestCertificateThumbprint>89D10ED8594F34031F5A571D1CE19C8949E889A9</ManifestCertificateThumbprint>
+    <ManifestKeyFile>SQLMonitor_TemporaryKey.pfx</ManifestKeyFile>
+    <SignAssembly>false</SignAssembly>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>send</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>none</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CConfig.cs" />
+    <Compile Include="CPerfData.cs" />
+    <Compile Include="Driver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driver.Designer.cs">
+      <DependentUpon>Driver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LatchStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LatchStats.Designer.cs">
+      <DependentUpon>LatchStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Locks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Locks.Designer.cs">
+      <DependentUpon>Locks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcCacheDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcCacheDetails.Designer.cs">
+      <DependentUpon>ProcCacheDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessInfo.Designer.cs">
+      <DependentUpon>ProcessInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Processing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Processing.Designer.cs">
+      <DependentUpon>Processing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driver.resx">
+      <DependentUpon>Driver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GProgressBar.resx">
+      <DependentUpon>GProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LatchStats.resx">
+      <DependentUpon>LatchStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Locks.resx">
+      <DependentUpon>Locks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcCacheDetails.resx">
+      <DependentUpon>ProcCacheDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessInfo.resx">
+      <DependentUpon>ProcessInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processing.resx">
+      <DependentUpon>Processing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryInfo.resx">
+      <DependentUpon>QueryInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLAuthDlg.resx">
+      <DependentUpon>SQLAuthDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLMemory.resx">
+      <DependentUpon>SQLMemory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempDBInfo.resx">
+      <DependentUpon>TempDBInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsrCons.resx">
+      <DependentUpon>UsrCons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitInfo.resx">
+      <DependentUpon>WaitInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQLMonitor_TemporaryKey.pfx" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="QueryInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryInfo.Designer.cs">
+      <DependentUpon>QueryInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLAuthDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLAuthDlg.Designer.cs">
+      <DependentUpon>SQLAuthDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLMemory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLMemory.Designer.cs">
+      <DependentUpon>SQLMemory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TempDBInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempDBInfo.Designer.cs">
+      <DependentUpon>TempDBInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsrCons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsrCons.Designer.cs">
+      <DependentUpon>UsrCons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitInfo.Designer.cs">
+      <DependentUpon>WaitInfo.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
