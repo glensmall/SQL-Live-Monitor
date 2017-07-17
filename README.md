@@ -34,4 +34,4 @@ This tool is designed to provide realtime performance data on SQL Server, as wel
 
 # Download
 
-This version 1.34 is builf for .net 4.0 [SQL Live Monitor](app/SQLMonitor.zip)
+This version 1.34 is build for .net 4.0 [SQL Live Monitor](app/SQLMonitor.zip)
