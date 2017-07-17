@@ -1,4 +1,4 @@
-t# SQL Live Monitor
+# SQL Live Monitor
 
 
 # Description
