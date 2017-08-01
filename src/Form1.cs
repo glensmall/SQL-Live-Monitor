@@ -666,6 +666,13 @@ namespace SQLMonitor
                 MyappConfig.denali = false;
                 MyappConfig.is2014 = true;
             }
+            else
+            {
+                // quick fix to handle 2016 onwards.  Dealing with items that have been removed.
+                MyappConfig.pre2005 = false;
+                MyappConfig.denali = false;
+                MyappConfig.is2014 = true;
+            }
 
             // display the version to the user (on the form) and log it
             lblVersion.Text = vdr[0] + " - " + vdr[1] + " - " + vdr[2];
